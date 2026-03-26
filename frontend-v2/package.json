@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --mode _local",
-    "prod": "vite --mode -prod",
+    "prod": "vite --mode _prod",
     "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode _local",
+    "build:prod": "vite build --mode _prod",
     "lint": "eslint .",
     "preview": "vite preview"
   },
