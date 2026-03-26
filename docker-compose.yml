@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    container_name: stockai-backend
+    ports:
+      - "8000:8000"
+    restart: always
+
+  frontend:
+    build: ./frontend-v2
+    container_name: stockai-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always
