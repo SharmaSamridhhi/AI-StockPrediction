@@ -1,5 +1,8 @@
 # 📈 AI Stock Prediction App
 
+<img width="1440" height="900" alt="Screenshot 2026-03-26 at 3 58 19 PM" src="https://github.com/user-attachments/assets/2c52010f-44f8-4be6-a9bf-07f26b62d871" />
+
+
 A full-stack AI-powered stock prediction web application built using **FastAPI**, **React (Vite)**, and **Docker**.
 It allows users to analyze stock trends and generate predictions using machine learning models.
 
@@ -92,63 +95,3 @@ docker compose up --build
 * The project uses multi-container setup via Docker Compose
 * Backend runs on port **8000**
 * Frontend is served via **Nginx on port 3000**
-
----
-
-## ⚠️ Known Issues
-
-* Plotly charts may not work unless `plotly` is installed in backend
-* Prophet installation may require build tools in Docker
-* Ensure ports 3000 and 8000 are free before running
-
----
-
-## 🌍 Deployment
-
-You can deploy this project using:
-
-* Render (Recommended)
-* Railway
-* VPS (AWS / DigitalOcean / Linode)
-
-### Important:
-
-* Replace `localhost` with your deployed backend URL in frontend
-* Enable CORS in FastAPI for production
-
----
-
-## 🛠️ Future Improvements
-
-* Add authentication system
-* Improve UI/UX
-* Add more ML models (LSTM, ARIMA)
-* Real-time stock data integration
-* Deploy CI/CD pipeline
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork this repo and submit a pull request.
-
----
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
-
----
-
-## 👨‍💻 Author
-
-**Mayank Sharma**
-
----
-
-## ⭐ Support
-
-If you like this project, please give it a ⭐ on GitHub!
-
----
