@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import { useSearchParams } from "react-router-dom";
 import {
   Card,
@@ -28,8 +29,7 @@ import {
   type Prediction,
 } from "@/types/dashboard";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const Dashboard: React.FC = () => {
   const [query, setQuery] = useState("");
@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${API_BASE_URL}/search_stock?query=${queryText}`
+        `${API_BASE_URL}/search_stock?query=${queryText}`,
       );
       const data = await res.json();
       setSearchResults(data.results || []);
@@ -73,7 +73,7 @@ const Dashboard: React.FC = () => {
 
     try {
       const historyRes = await fetch(
-        `${API_BASE_URL}/history?symbol=${stock.symbol}&period=6mo&interval=1d`
+        `${API_BASE_URL}/history?symbol=${stock.symbol}&period=6mo&interval=1d`,
       );
       const historyData = await historyRes.json();
       setStockHistory(historyData.history || []);
